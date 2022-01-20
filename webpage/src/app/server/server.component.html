@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div *ngFor="let server of servers; let i = index">
+        <p
+          style="padding-left: 5px; font-size: 3em; color: white"
+          class="server"
+          [ngStyle]="{ backgroundColor: getBackground(server.status) }"
+        >
+          {{ server.name | uppercase }} | {{ server.status | uppercase }}
+          <button
+            *ngIf="server.status === 'offline'"
+            class="btn btn-success"
+            (click)="onTurnOnServer(i)"
+          >
+            Turn On Server
+          </button>
+          <button
+            *ngIf="server.status === 'online'"
+            class="btn btn-danger"
+            (click)="onTurnOffServer(i)"
+          >
+            Turn Off Server
+          </button>
+          <button
+            class="btn btn-danger"
+            (click)="onRemoveServer(i)"
+            style="display: absolute; margin-left: 80%; top: 5px"
+          >
+            Remove Server
+          </button>
+        </p>
+      </div>
+      <button
+        class="btn btn-primary"
+        style="background: #ffee6f; color: #001f36"
+        (click)="onAddServer()"
+      >
+        Add New Server
+      </button>
+    </div>
+  </div>
+</div>

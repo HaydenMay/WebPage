@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <div *ngFor="let user of users; let i = index">
+                <p>
+                   Username: {{user.username}}
+                   Logged In: {{getLoggedIn(i)}}
+                </p>
+
+            </div>
+            <button *ngIf="addingUser === false" class="btn btn-primary" style="background: #ffee6f; color:#001f36" (click)="onAddUser()">
+                Add User
+            </button>  
+            <div *ngIf = "addingUser === true">
+                <app-add-users></app-add-users>
+            </div>
+        </div>
+    </div>
+</div>

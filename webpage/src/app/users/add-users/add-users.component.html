@@ -1,0 +1,41 @@
+<div class="form-group">
+  <h4 style="color: #ffee6f">Adding a New User</h4>
+  <form (ngSubmit)="submitUser()" style="color: #ffee6f" #f="ngForm">
+    <div>
+      <label style="margin-right: 10px;" for="username">New User:</label>
+      <input
+        type="text"
+        id="newUsername"
+        class="form-control"
+        [(ngModel)] = "newUsername"
+        placeholder="Add Username Here"
+        name="newUsername"
+      />
+    </div>
+    <div>
+      <label style="margin-right: 10px" for="loggedIn">User Logged In?</label>
+      <select
+      id="isLoggedIn"
+      class="form-control"
+      [(ngModel)]="isLoggedIn"
+      name="loggedIn">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </div>
+    <div>
+      <label style="margin-right: 10px" for="description">Description:</label>
+      <textarea
+        placeholder="Add User Description"
+        class="form-control"
+        rows="3"
+        id="description"
+        [(ngModel)]="description"
+        name= 'description'
+      ></textarea>
+    </div>
+    <button style="margin-top: 10px; background: #001f36;" type="submit" (click)="submitUser()">
+      Submit
+    </button>
+  </form>
+</div>

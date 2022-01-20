@@ -1,0 +1,21 @@
+.links {
+  cursor: pointer;
+  background: #001f36;
+  background-color: transparent;
+  justify-content: center;
+  color: #ffee6f;
+}
+
+ul {
+  list-style-type: none;
+  background-color: #001f36;
+  display:flex;
+}
+li{
+  margin: 16px;
+  text-align: center;
+}
+li a:hover{
+  background-color:#ffee6f;
+  color:#001f36;
+}

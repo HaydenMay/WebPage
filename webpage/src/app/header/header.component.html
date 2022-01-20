@@ -1,0 +1,37 @@
+<nav class="navbar navbar-default">
+  <div
+    class="container-fluid"
+    style="background: #001f36; border: #ffee6f solid 2px"
+  >
+    <div class="navbar-header">
+      <ul>
+        <li>
+          <a
+            class="navbar-brand links"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [routerLink]="['/home']"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            class="navbar-brand links"
+            routerLinkActive="active"
+            [routerLink]="['/servers']"
+            >Servers</a
+          >
+        </li>
+        <li>
+          <a
+            routerLinkActive="active"
+            class="navbar-brand links"
+            [routerLink]="['/users']"
+            >Users</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-default"></div>
+  </div>
+</nav>
